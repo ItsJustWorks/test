@@ -1,0 +1,147 @@
+body, html {
+    font-family: 'Limelight', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #e072a5;
+}
+
+.background {
+    display: flex;
+    height: 100vh;
+}
+
+.stripe {
+    flex: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.stripe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.stripe.loaded {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 200px;
+    background-color: rgba(217, 217, 217, 0.5);
+
+    border-radius: 10px;
+    z-index: 1000; 
+}
+
+.overlay-content {
+
+    border-radius: 10px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.overlay-second {
+
+    margin-top: 59%;
+
+    border-radius: 10px;
+    border: 1px solid white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.overlay-content p {
+    font-size: 64px;
+    margin: 0;
+    color: black;
+}
+.overlay-content #p2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: black;
+}
+
+.center-image {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-image {
+    left: 6%;
+}
+
+.right-image {
+    right: 6%;
+}
+
+.center-image img {
+    width: 200px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+
+
+.start-button-no-block {
+    position: fixed;
+    margin-top: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(217, 217, 217, 0.5); 
+    backdrop-filter: blur(8px); 
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.start-button-no-block:hover {
+    background-color: rgba(217, 217, 217, 0.8); 
+}
+
+
+.left-image img,
+.right-image img {
+    animation: liftEffect 3s ease-in-out infinite alternate; 
+}
+
+@keyframes liftEffect {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px); 
+    }
+}
+
+
+
+.icon {
+    position: fixed;
+    width: 10%;
+    height: 25%;
+    top: 10px;
+    left: 10px;
+}
